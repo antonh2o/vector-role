@@ -6,4 +6,3 @@
   ansible.builtin.systemd:
     name: vector
     state: restarted
-  when: ansible_facts.virtualization_type != "docker"

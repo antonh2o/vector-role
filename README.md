@@ -13,7 +13,7 @@ Role Variables
 --------------
 
 Переменные для установки кредов
-default/main.yml:
+defaults/main.yml:
 ```yaml
 clickhouse_user: netology
 clickhouse_password: netology
@@ -24,12 +24,12 @@ clickhouse_password: netology
 Dependencies
 ------------
 
-В `inventory` должен быть хост `clickhouse-01`
+В `inventory` должен быть хост `clickhouse01`
 ```yaml
-endpoint: http://{{ hostvars['clickhouse-01'].ansible_host }}:8123
+endpoint: http://{{ clickhouse01_ip }}:8123
 ```
 
-Требуется роль [clickhouse-role](https://github.com/danilabar/clickhouse-role)
+Требуется роль [clickhouse-role](https://github.com/antonh2o/clickhouse-role)
 
 Example Playbook
 ----------------
